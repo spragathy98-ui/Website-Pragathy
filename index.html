@@ -59,31 +59,28 @@
         .timeline-content .company { font-weight: bold; color: var(--secondary); display: block; margin: 5px 0; }
         .timeline-content .date { font-size: 0.85rem; color: #64748b; font-style: italic; }
         .timeline-content ul { list-style: none; margin-top: 10px; font-size: 0.9rem; }
-        .left ul { padding-right: 0; }
 
-        /* Skills & Education Grid */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card { background: var(--white); padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); height: 100%; }
-        .card h3 { color: var(--primary); margin-bottom: 15px; border-bottom: 2px solid var(--bg-slate); padding-bottom: 5px; }
+        /* Grid Layouts */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+        .card { background: var(--white); padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); height: 100%; border-top: 4px solid var(--primary); }
+        .card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.25rem; }
         .card ul { list-style: none; }
-        .card ul li { margin-bottom: 8px; padding-left: 15px; position: relative; }
-        .card ul li::before { content: '▹'; position: absolute; left: 0; color: var(--accent); }
+        .card ul li { margin-bottom: 12px; padding-left: 20px; position: relative; }
+        .card ul li::before { content: '•'; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
 
-        /* Impact Highlights */
-        .impact-box { background: var(--primary); color: var(--white); padding: 40px 20px; text-align: center; border-radius: 8px; margin-top: 30px; }
+        .nasa-link { color: var(--accent); text-decoration: none; font-weight: bold; }
+        .nasa-link:hover { text-decoration: underline; }
 
         footer { background: var(--primary); color: var(--white); padding: 40px 0; text-align: center; }
         .social { margin-top: 15px; }
         .social a { color: var(--white); margin: 0 10px; text-decoration: none; font-size: 0.9rem; opacity: 0.8; }
         .social a:hover { opacity: 1; text-decoration: underline; }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .timeline::after { left: 20px; }
             .timeline-item { width: 100%; padding-left: 45px; text-align: left; }
             .timeline-item::after { left: 12px; }
             .left { left: 0; }
-            .hero h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
@@ -92,7 +89,7 @@
     <header>
         <div class="container hero">
             <h1>Pragathy S</h1>
-            <p>Senior FP&A Analyst | Chartered Accountant (CA) | Cost & Management Accountant (CMA)</p>
+            <p>Senior FP&A Analyst | Chartered Accountant (CA) | NASA Global Award Winner</p>
             <div class="btn-group">
                 <a href="https://www.linkedin.com/in/pragathy-s" class="btn btn-primary">LinkedIn Profile</a>
                 <a href="mailto:pragathy.s23@gmail.com" class="btn btn-outline">Let's Connect</a>
@@ -100,11 +97,19 @@
         </div>
     </header>
 
-    <section id="summary">
+    <section id="leadership">
         <div class="container">
-            <h2 class="section-title">Professional Summary</h2>
-            <div class="card" style="text-align: center; max-width: 900px; margin: 0 auto;">
-                <p>Detail-oriented finance and accounting professional with expertise in cost and management accounting, private equity, and financial analysis[cite: 4]. Adept at managing cross-functional teams, preparing financial statements, and ensuring regulatory compliance across FMCG, IT, and manufacturing sectors[cite: 5, 6].</p>
+            <h2 class="section-title">Leadership & Impact</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>NASA Space Apps Winner</h3>
+                    <p>Global Winner of the <strong>'Galactic Impact Award'</strong> for the "Commercialization of LEO" project. Led the finance team, 'Astrosweepers', in crafting comprehensive financial projections and forecasts.</p>
+                    <p style="margin-top: 10px;"><a href="https://www.spaceappschallenge.org/" class="nasa-link">NASA Space Apps Challenge &rarr;</a></p>
+                </div>
+                <div class="card">
+                    <h3>Academic Mentorship</h3>
+                    <p>Served as a Part-Time Professor for CMA Intermediate levels at Adhyapana Academy. Orchestrated teaching strategies that resulted in a <strong>94% student success rate</strong> through concept-driven clarity.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -117,102 +122,67 @@
                     <div class="timeline-content">
                         <span class="date">Dec 2025 - Present</span>
                         <h3>Senior FP&A Analyst</h3>
-                        <span class="company">Lennox India Technology Centre Pvt Ltd</span>
-                        <ul>
-                            <li>Analyzes SG&A Spend and cost trends to provide management insights[cite: 12, 13].</li>
-                            <li>Assists in Competition Benchmarking and Consensus Reporting[cite: 14].</li>
-                        </ul>
+                        <span class="company">Lennox India Technology Centre Pvt Ltd [cite: 8, 9, 11]</span>
+                        <p>Specializing in SG&A spend analysis and consensus reporting[cite: 12, 14].</p>
                     </div>
                 </div>
                 <div class="timeline-item left">
                     <div class="timeline-content">
                         <span class="date">Feb 2025 - Oct 2025</span>
                         <h3>Research Analyst cum Trade Dealer</h3>
-                        <span class="company">KYNG Capital Management Pvt Ltd</span>
-                        <ul>
-                            <li>Supported Fund Manager in managing INR 150Crs AUM, yielding a 14.7% return.</li>
-                            <li>Formulated hedging strategies and executed trades for the PMS[cite: 23].</li>
-                        </ul>
+                        <span class="company">KYNG Capital Management Pvt Ltd [cite: 17, 19]</span>
+                        <p>Managed INR 150Crs AUM with 14.7% returns[cite: 20].</p>
                     </div>
                 </div>
                 <div class="timeline-item right">
                     <div class="timeline-content">
                         <span class="date">Sep 2022 - Mar 2024</span>
                         <h3>CA Industrial Trainee</h3>
-                        <span class="company">J.P. Morgan Chase & Co.</span>
-                        <ul>
-                            <li>Managed quarterly deliverables (GAV/NAV/Waterfall) for funds with EUR 100-150Crs contribution.</li>
-                            <li>Collaborated with global counterparts in Dublin for fund reporting[cite: 29].</li>
-                        </ul>
+                        <span class="company">J.P. Morgan Chase & Co. [cite: 24, 26]</span>
+                        <p>Handled private equity fund accounting for EUR 100-150Crs funds[cite: 25, 27].</p>
                     </div>
                 </div>
                 <div class="timeline-item left">
                     <div class="timeline-content">
                         <span class="date">Mar 2021 - Sep 2022</span>
                         <h3>Articled Assistant</h3>
-                        <span class="company">IPRS and Company, Chartered Accountants</span>
-                        <ul>
-                            <li>Prepared Financial Statements for entities with turnovers up to INR 115Crs[cite: 35].</li>
-                            <li>Led tax audits and handled incorporations/registrations[cite: 40, 44].</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <span class="date">Jul 2020 - Jun 2023</span>
-                        <h3>Part-Time Professor (CMA Inter)</h3>
-                        <span class="company">Adhyapana Academy</span>
-                        <ul>
-                            <li>Delivered lectures on Financial & Strategic Management with a 94% success rate.</li>
-                        </ul>
+                        <span class="company">IPRS and Company, CAs [cite: 32, 34]</span>
+                        <p>Expertise in tax audits and financial reporting for large entities[cite: 35, 40].</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="education-skills">
+    <section id="additional-activities">
         <div class="container">
-            <h2 class="section-title">Education & Expertise</h2>
+            <h2 class="section-title">Additional Activities</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>Education</h3>
+                    <h3>Guest Speaking & Expert Talks</h3>
                     <ul>
-                        <li><strong>CA:</strong> ICAI (Finalist - Sep 2025)[cite: 57, 59].</li>
-                        <li><strong>CMA:</strong> ICAI (Cost) - All levels in 1st attempt with Distinction[cite: 63, 65].</li>
-                        <li><strong>B.Com:</strong> Madras University (NAAC A++)[cite: 66, 68].</li>
-                        <li><strong>Schooling:</strong> 93.75% in HSC; School Third[cite: 75].</li>
+                        <li><strong>Karpagam Academy:</strong> Guest speaker on "Awareness on Chartered Accountancy program"[cite: 86].</li>
+                        <li><strong>Easwari Engineering College:</strong> Expert talk on "Profit by Design: Crafting resilient Investment Portfolios"[cite: 87].</li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>Technical Skills</h3>
+                    <h3>Education & Certifications</h3>
                     <ul>
-                        <li><strong>Tools:</strong> Investran, MS Excel, SAP, Power BI, Tally ERP.</li>
-                        <li><strong>Expertise:</strong> Financial Reporting, Budgeting, GAV/NAV, Tax Filings[cite: 90, 91].</li>
-                        <li><strong>Certifications:</strong> NISM Portfolio Manager (Valid till 2028)[cite: 85].</li>
+                        <li><strong>Chartered Accountant (CA):</strong> Cleared all levels (Group 2 Final Sept 2025)[cite: 57, 60].</li>
+                        <li><strong>Cost & Management Accountant (CMA):</strong> Distinction in all levels[cite: 63, 65].</li>
+                        <li><strong>NISM Certification:</strong> Portfolio Managers certification (Valid till 2028)[cite: 84, 85].</li>
                     </ul>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="achievements" style="background: var(--bg-slate);">
-        <div class="container">
-            <h2 class="section-title">Global Impact</h2>
-            <div class="impact-box">
-                <h3>NASA Space Apps Challenge: Global Winner</h3>
-                <p>Awarded the <strong>'Galactic Impact Award'</strong> for the project "Commercialization of LEO". Led Team 'Astrosweepers' as Finance Head, driving all projections and forecasts[cite: 88].</p>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>Pragathy S | Chennai, Tamil Nadu</p>
-            <p>+91-93420 59821 | s.pragathy98@gmail.com</p>
+            <p>Pragathy S | Chennai, Tamil Nadu [cite: 1, 2]</p>
+            <p>+91-93420 59821 | pragathy.s23@gmail.com [cite: 2]</p>
             <div class="social">
-                <a href="https://www.linkedin.com/in/pragathy-s">LinkedIn</a>
-                <a href="mailto:pragathy.s23@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/pragathy-s">LinkedIn [cite: 2]</a>
             </div>
         </div>
     </footer>
