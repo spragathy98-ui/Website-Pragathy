@@ -3,17 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pragathy S | Senior Analyst FP&A</title>
+    <title>Pragathy S | Senior FP&A Analyst & Chartered Accountant</title>
     <style>
         /* Base Reset & Typography */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             line-height: 1.6;
             color: #334155;
             background-color: #f8fafc;
@@ -25,207 +20,68 @@
             --primary: #1e3a8a;
             --secondary: #334155;
             --accent: #3b82f6;
-            --bg-light: #f8fafc;
             --white: #ffffff;
-            --border: #e2e8f0;
+            --bg-slate: #f1f5f9;
         }
 
-        /* Layout Container */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
         /* Hero Section */
         header {
             background: linear-gradient(135deg, #1e3a8a 0%, #1e293b 100%);
             color: var(--white);
-            padding: 100px 0;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            letter-spacing: -1px;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
-            opacity: 0.9;
-        }
-
-        .btn-group {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .btn {
-            padding: 12px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background-color: var(--white);
-            color: var(--primary);
-        }
-
-        .btn-outline {
-            border: 2px solid var(--white);
-            color: var(--white);
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-
-        /* General Section Styling */
-        section {
             padding: 80px 0;
-        }
-
-        .section-title {
             text-align: center;
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 50px;
-            position: relative;
         }
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 25px; opacity: 0.9; }
+        .btn-group { display: flex; justify-content: center; gap: 15px; }
+        .btn { padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: 600; transition: 0.3s; }
+        .btn-primary { background: var(--white); color: var(--primary); }
+        .btn-outline { border: 2px solid var(--white); color: var(--white); }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
 
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background: var(--accent);
-            margin: 15px auto 0;
-        }
+        /* Sections */
+        section { padding: 60px 0; }
+        .section-title { text-align: center; color: var(--primary); margin-bottom: 40px; font-size: 2rem; }
+        .section-title::after { content: ''; display: block; width: 50px; height: 3px; background: var(--accent); margin: 10px auto; }
 
-        /* About Section */
-        #about .content {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-        }
-
-        /* Timeline Section */
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 4px;
-            background-color: var(--primary);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -2px;
-        }
-
-        .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            background-color: inherit;
-            width: 50%;
-        }
-
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            right: -10px;
-            background-color: var(--white);
-            border: 4px solid var(--accent);
-            top: 15px;
-            border-radius: 50%;
-            z-index: 1;
-        }
-
+        /* Professional Journey (Timeline) */
+        .timeline { position: relative; max-width: 900px; margin: 0 auto; }
+        .timeline::after { content: ''; position: absolute; width: 4px; background: var(--primary); top: 0; bottom: 0; left: 50%; margin-left: -2px; }
+        .timeline-item { padding: 10px 40px; position: relative; width: 50%; }
+        .timeline-item::after { content: ''; position: absolute; width: 16px; height: 16px; right: -8px; background: var(--white); border: 3px solid var(--accent); top: 20px; border-radius: 50%; z-index: 1; }
         .left { left: 0; text-align: right; }
         .right { left: 50%; }
-        .right::after { left: -10px; }
-
-        .timeline-content {
-            padding: 20px;
-            background: var(--white);
-            border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-
+        .right::after { left: -8px; }
+        .timeline-content { padding: 20px; background: var(--white); border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .timeline-content h3 { color: var(--primary); font-size: 1.1rem; }
-        .timeline-content span { font-size: 0.9rem; color: #64748b; font-weight: bold; }
+        .timeline-content .company { font-weight: bold; color: var(--secondary); display: block; margin: 5px 0; }
+        .timeline-content .date { font-size: 0.85rem; color: #64748b; font-style: italic; }
+        .timeline-content ul { list-style: none; margin-top: 10px; font-size: 0.9rem; }
+        .left ul { padding-right: 0; }
 
-        /* Projects Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
+        /* Skills & Education Grid */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: var(--white); padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); height: 100%; }
+        .card h3 { color: var(--primary); margin-bottom: 15px; border-bottom: 2px solid var(--bg-slate); padding-bottom: 5px; }
+        .card ul { list-style: none; }
+        .card ul li { margin-bottom: 8px; padding-left: 15px; position: relative; }
+        .card ul li::before { content: '▹'; position: absolute; left: 0; color: var(--accent); }
 
-        .project-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 8px;
-            border-top: 4px solid var(--primary);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
+        /* Impact Highlights */
+        .impact-box { background: var(--primary); color: var(--white); padding: 40px 20px; text-align: center; border-radius: 8px; margin-top: 30px; }
 
-        .project-card:hover { transform: translateY(-5px); }
+        footer { background: var(--primary); color: var(--white); padding: 40px 0; text-align: center; }
+        .social { margin-top: 15px; }
+        .social a { color: var(--white); margin: 0 10px; text-decoration: none; font-size: 0.9rem; opacity: 0.8; }
+        .social a:hover { opacity: 1; text-decoration: underline; }
 
-        .project-card h3 {
-            margin-bottom: 15px;
-            color: var(--primary);
-        }
-
-        /* Hobbies Section */
-        .hobby-section {
-            background-color: #f1f5f9;
-            text-align: center;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--primary);
-            color: var(--white);
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        .social-links {
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            color: var(--white);
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-            border-bottom: 1px solid transparent;
-        }
-
-        .social-links a:hover { border-bottom: 1px solid var(--white); }
-
-        /* Mobile Adjustments */
-        @media screen and (max-width: 768px) {
-            .timeline::after { left: 31px; }
-            .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; text-align: left; }
-            .timeline-item::after { left: 21px; }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .timeline::after { left: 20px; }
+            .timeline-item { width: 100%; padding-left: 45px; text-align: left; }
+            .timeline-item::after { left: 12px; }
             .left { left: 0; }
             .hero h1 { font-size: 2.2rem; }
         }
@@ -236,103 +92,127 @@
     <header>
         <div class="container hero">
             <h1>Pragathy S</h1>
-            <p>Senior Analyst FP&A | Strategic Finance Leader & NASA Space Apps Award Winner</p>
+            <p>Senior FP&A Analyst | Chartered Accountant (CA) | Cost & Management Accountant (CMA)</p>
             <div class="btn-group">
-                <a href="#" class="btn btn-primary">View Resume</a>
-                <a href="mailto:s.pragathy98@gmail.com" class="btn btn-outline">Let's Connect</a>
+                <a href="https://www.linkedin.com/in/pragathy-s" class="btn btn-primary">LinkedIn Profile</a>
+                <a href="mailto:pragathy.s23@gmail.com" class="btn btn-outline">Let's Connect</a>
             </div>
         </div>
     </header>
 
-    <section id="about">
+    <section id="summary">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="content">
-                <p>
-                    I am a finance professional driven by the intersection of rigorous analysis and strategic foresight. My journey began with foundational <strong>CA Articleship at IPRS</strong> and <strong>J.P. Morgan Chase</strong>, where I developed an uncompromising eye for detail. This evolved into a specialized focus on <strong>Equity Research at KYNG Capital Management</strong>, and has now culminated in my role leading <strong>Financial Planning & Analysis (FP&A)</strong>.
-                </p>
-                <br>
-                <p>
-                    Beyond the balance sheets, I bring a unique edge to leadership: the ability to translate complex financial data into actionable narratives. This skill was honed during my time as a <strong>Part-time Professor</strong>, where clarity and communication were paramount. I bridge the gap between technical financial rigor and high-level strategic decision-making.
-                </p>
+            <h2 class="section-title">Professional Summary</h2>
+            <div class="card" style="text-align: center; max-width: 900px; margin: 0 auto;">
+                <p>Detail-oriented finance and accounting professional with expertise in cost and management accounting, private equity, and financial analysis[cite: 4]. Adept at managing cross-functional teams, preparing financial statements, and ensuring regulatory compliance across FMCG, IT, and manufacturing sectors[cite: 5, 6].</p>
             </div>
         </div>
     </section>
 
-    <section id="journey" style="background-color: #f1f5f9;">
+    <section id="experience" style="background: var(--bg-slate);">
         <div class="container">
             <h2 class="section-title">Professional Journey</h2>
             <div class="timeline">
                 <div class="timeline-item right">
                     <div class="timeline-content">
-                        <span>PRESENT</span>
-                        <h3>Senior Analyst FP&A</h3>
-                        <p>Leading strategic financial planning and performance analysis.</p>
+                        <span class="date">Dec 2025 - Present</span>
+                        <h3>Senior FP&A Analyst</h3>
+                        <span class="company">Lennox India Technology Centre Pvt Ltd</span>
+                        <ul>
+                            <li>Analyzes SG&A Spend and cost trends to provide management insights[cite: 12, 13].</li>
+                            <li>Assists in Competition Benchmarking and Consensus Reporting[cite: 14].</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="timeline-item left">
                     <div class="timeline-content">
-                        <h3>Equity Research Analyst</h3>
-                        <p>KYNG Capital Management Pvt Ltd</p>
+                        <span class="date">Feb 2025 - Oct 2025</span>
+                        <h3>Research Analyst cum Trade Dealer</h3>
+                        <span class="company">KYNG Capital Management Pvt Ltd</span>
+                        <ul>
+                            <li>Supported Fund Manager in managing INR 150Crs AUM, yielding a 14.7% return.</li>
+                            <li>Formulated hedging strategies and executed trades for the PMS[cite: 23].</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="timeline-item right">
                     <div class="timeline-content">
+                        <span class="date">Sep 2022 - Mar 2024</span>
                         <h3>CA Industrial Trainee</h3>
-                        <p>J.P. Morgan Chase</p>
+                        <span class="company">J.P. Morgan Chase & Co.</span>
+                        <ul>
+                            <li>Managed quarterly deliverables (GAV/NAV/Waterfall) for funds with EUR 100-150Crs contribution.</li>
+                            <li>Collaborated with global counterparts in Dublin for fund reporting[cite: 29].</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="timeline-item left">
                     <div class="timeline-content">
-                        <h3>CA Articled Assistant</h3>
-                        <p>IPRS AND Company Chartered Accountants</p>
+                        <span class="date">Mar 2021 - Sep 2022</span>
+                        <h3>Articled Assistant</h3>
+                        <span class="company">IPRS and Company, Chartered Accountants</span>
+                        <ul>
+                            <li>Prepared Financial Statements for entities with turnovers up to INR 115Crs[cite: 35].</li>
+                            <li>Led tax audits and handled incorporations/registrations[cite: 40, 44].</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="timeline-item right">
                     <div class="timeline-content">
-                        <h3>Part-time Professor</h3>
-                        <p>Adhyapana Academy</p>
+                        <span class="date">Jul 2020 - Jun 2023</span>
+                        <h3>Part-Time Professor (CMA Inter)</h3>
+                        <span class="company">Adhyapana Academy</span>
+                        <ul>
+                            <li>Delivered lectures on Financial & Strategic Management with a 94% success rate.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects">
+    <section id="education-skills">
         <div class="container">
-            <h2 class="section-title">Projects & Impact</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>NASA Space Apps 2025</h3>
-                    <p>Served as the <strong>Finance Lead</strong> for the team that secured the prestigious <strong>'Galactic Impact Award'</strong>. Managed resource allocation and project viability in a high-pressure global innovation challenge.</p>
+            <h2 class="section-title">Education & Expertise</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Education</h3>
+                    <ul>
+                        <li><strong>CA:</strong> ICAI (Finalist - Sep 2025)[cite: 57, 59].</li>
+                        <li><strong>CMA:</strong> ICAI (Cost) - All levels in 1st attempt with Distinction[cite: 63, 65].</li>
+                        <li><strong>B.Com:</strong> Madras University (NAAC A++)[cite: 66, 68].</li>
+                        <li><strong>Schooling:</strong> 93.75% in HSC; School Third[cite: 75].</li>
+                    </ul>
                 </div>
-                <div class="project-card">
-                    <h3>Academic Excellence</h3>
-                    <p>Achieved a remarkable <strong>94% student success rate</strong> during my tenure as a Professor at Adhyapana Academy, demonstrating a commitment to mentorship and clear communication.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Institutional Expertise</h3>
-                    <p>Played instrumental roles within <strong>Global Tier-1 firms</strong>, contributing to institutional-grade equity research and sophisticated industrial financial training.</p>
+                <div class="card">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li><strong>Tools:</strong> Investran, MS Excel, SAP, Power BI, Tally ERP.</li>
+                        <li><strong>Expertise:</strong> Financial Reporting, Budgeting, GAV/NAV, Tax Filings[cite: 90, 91].</li>
+                        <li><strong>Certifications:</strong> NISM Portfolio Manager (Valid till 2028)[cite: 85].</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="hobby-section">
+    <section id="achievements" style="background: var(--bg-slate);">
         <div class="container">
-            <h2 class="section-title">Leadership & Discipline</h2>
-            <p style="max-width: 800px; margin: 0 auto;">
-                My professional discipline is mirrored in my lifelong passion for <strong>Dance</strong>. Years of participation and success in competitive dance have instilled in me a unique blend of creativity, physical discipline, and the poise required to perform under the spotlight—traits I bring to every boardroom and financial presentation.
-            </p>
+            <h2 class="section-title">Global Impact</h2>
+            <div class="impact-box">
+                <h3>NASA Space Apps Challenge: Global Winner</h3>
+                <p>Awarded the <strong>'Galactic Impact Award'</strong> for the project "Commercialization of LEO". Led Team 'Astrosweepers' as Finance Head, driving all projections and forecasts[cite: 88].</p>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Pragathy S. All Rights Reserved.</p>
-            <div class="social-links">
+            <p>Pragathy S | Chennai, Tamil Nadu</p>
+            <p>+91-93420 59821 | s.pragathy98@gmail.com</p>
+            <div class="social">
                 <a href="https://www.linkedin.com/in/pragathy-s">LinkedIn</a>
-                <a href="mailto:s.pragathy98@gmail.com">Email</a>
+                <a href="mailto:pragathy.s23@gmail.com">Email</a>
             </div>
         </div>
     </footer>
