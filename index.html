@@ -11,69 +11,79 @@
             font-family: 'Segoe UI', Arial, sans-serif;
             line-height: 1.6;
             color: #334155;
-            background-color: #f8fafc;
+            background-color: #f5f3ff; /* Very light purple bg */
             scroll-behavior: smooth;
         }
 
         :root {
-            --primary: #1e3a8a; /* Purple */
-            --accent: #3b82f6;  /* Professional Purple*/
-            --bg-slate: #f1f5f9;
+            --primary: #4c1d95; /* Deep Purple */
+            --accent: #8b5cf6;  /* Bright Purple */
+            --bg-slate: #f3f0ff;
             --white: #ffffff;
         }
 
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-        /* Hero Section */
+        /* Hero Section - Purple Gradient */
         header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e293b 100%);
+            background: linear-gradient(135deg, #4c1d95 0%, #1e1b4b 100%);
             color: var(--white);
             padding: 80px 0;
             text-align: center;
         }
-        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
-        .hero p { font-size: 1.2rem; margin-bottom: 25px; opacity: 0.9; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.3rem; margin-bottom: 25px; opacity: 0.9; }
         .btn-group { display: flex; justify-content: center; gap: 15px; }
         .btn { padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: 600; transition: 0.3s; display: inline-block; cursor: pointer; border: none; }
         .btn-primary { background: var(--white); color: var(--primary); }
         .btn-outline { border: 2px solid var(--white); color: var(--white); background: transparent; }
-        .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
 
         /* Sections */
-        section { padding: 60px 0; }
-        .section-title { text-align: center; color: var(--primary); margin-bottom: 40px; font-size: 2rem; }
-        .section-title::after { content: ''; display: block; width: 50px; height: 3px; background: var(--accent); margin: 10px auto; }
+        section { padding: 80px 0; }
+        .section-title { text-align: center; color: var(--primary); margin-bottom: 40px; font-size: 2.2rem; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: var(--accent); margin: 15px auto; }
 
         /* Grid Layouts */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
-        .card { background: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-top: 4px solid var(--primary); height: 100%; }
-        .card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.25rem; }
-        .card ul { list-style: none; padding: 0; }
-        .card li { margin-bottom: 10px; position: relative; padding-left: 20px; }
-        .card li::before { content: "→"; position: absolute; left: 0; color: var(--accent); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .card { background: var(--white); padding: 30px; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-top: 5px solid var(--primary); height: 100%; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.4rem; }
+        .card p { font-size: 1rem; color: #4b5563; }
+        .card ul { list-style: none; padding: 0; margin-top: 15px; }
+        .card li { margin-bottom: 8px; position: relative; padding-left: 20px; font-size: 0.95rem; }
+        .card li::before { content: "•"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
         
-        /* Timeline */
+        /* Timeline - Professional Journey */
         .timeline { position: relative; max-width: 900px; margin: 0 auto; }
         .timeline::after { content: ''; position: absolute; width: 4px; background: var(--primary); top: 0; bottom: 0; left: 50%; margin-left: -2px; }
         .timeline-item { padding: 10px 40px; position: relative; width: 50%; }
-        .timeline-item::after { content: ''; position: absolute; width: 16px; height: 16px; right: -8px; background: var(--white); border: 3px solid var(--accent); top: 20px; border-radius: 50%; z-index: 1; }
+        .timeline-item::after { content: ''; position: absolute; width: 20px; height: 20px; right: -10px; background: var(--white); border: 4px solid var(--accent); top: 20px; border-radius: 50%; z-index: 1; }
         .left { left: 0; text-align: right; }
         .right { left: 50%; }
-        .right::after { left: -8px; }
-        .timeline-content { padding: 20px; background: var(--white); border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .timeline-content h4 { color: var(--primary); margin-bottom: 5px; }
-        .timeline-content .company { font-weight: bold; display: block; margin-bottom: 5px; }
-        .timeline-content .date { font-size: 0.9rem; color: #64748b; font-style: italic; display: block; margin-bottom: 10px; }
+        .right::after { left: -10px; }
+        .timeline-content { padding: 25px; background: var(--white); border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 4px solid var(--accent); }
+        .timeline-content h4 { color: var(--primary); margin-bottom: 5px; font-size: 1.2rem; }
+        .timeline-content .company { font-weight: bold; display: block; color: #1e1b4b; }
+        .timeline-content .date { font-size: 0.85rem; color: #6d28d9; font-weight: 600; display: block; margin-bottom: 10px; text-transform: uppercase; }
+        .timeline-content p { font-size: 0.9rem; color: #4b5563; }
 
-        /* Footer */
-        footer { background: var(--primary); color: var(--white); padding: 40px 0; text-align: center; }
-        .social-link { color: var(--white); text-decoration: none; font-weight: bold; margin: 0 10px; }
+        /* Stats Section for Success Rates */
+        .stats-bar { display: flex; justify-content: space-around; background: var(--primary); color: white; padding: 40px 0; margin: 40px 0; border-radius: 15px; text-align: center; }
+        .stat-item h2 { font-size: 2.5rem; margin-bottom: 5px; }
+        .stat-item p { font-size: 1rem; opacity: 0.8; }
+
+        footer { background: #1e1b4b; color: var(--white); padding: 50px 0; text-align: center; }
+        .social-link { color: #ddd6fe; text-decoration: none; font-weight: bold; margin: 0 15px; transition: 0.3s; }
+        .social-link:hover { color: var(--white); }
 
         @media (max-width: 768px) {
             .timeline::after { left: 20px; }
             .timeline-item { width: 100%; padding-left: 45px; text-align: left; }
-            .timeline-item::after { left: 12px; }
+            .timeline-item::after { left: 10px; }
             .left { left: 0; }
+            .hero h1 { font-size: 2.5rem; }
+            .stats-bar { flex-direction: column; gap: 30px; }
         }
     </style>
 </head>
@@ -82,48 +92,31 @@
     <header>
         <div class="container hero">
             <h1>Pragathy S</h1>
-            <p>Senior FP&A Analyst | CA & CMA | NASA Space App challenge winner'25 </p>
+            <p>Senior FP&A Analyst | CA & CMA | NASA Space Apps Global Winner '25</p>
             <div class="btn-group">
-                <a href="https://www.linkedin.com/in/pragathy-s" class="btn btn-primary">LinkedIn Profile</a>
-                <button onclick="window.botpressWebChat.sendEvent({ type: 'show' })" class="btn btn-outline">Chat with my AI</button>
+                <a href="https://www.linkedin.com/in/pragathy-s" target="_blank" class="btn btn-primary">Connect on LinkedIn</a>
+                <a href="mailto:pragathy.s23@gmail.com" class="btn btn-outline">Email Me</a>
             </div>
         </div>
     </header>
 
-    <section id="leadership">
+    <section id="impact">
         <div class="container">
             <h2 class="section-title">Leadership & Global Impact</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>NASA Space Apps Winner</h3>
-                    <p>Global Winner of the <strong>'Galactic Impact Award'</strong> for the project "Commercialization of LEO". Led Team Astrosweepers as <strong>Finance Head</strong>, spearheading all strategic projections and forecasts.</p>
-                    <a href="https://www.spaceappschallenge.org/2025/find-a-team/astro-sweepers-we-catch-what-space-leaves-behind/?tab=details" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: bold; display: inline-block; margin-top: 15px;">NASA Space Apps Challenge &rarr;</a>
+                    <h3>NASA Space Apps Global Winner</h3>
+                    <p>Awarded the <strong>"Galactic Impact Award"</strong> for the project "Commercialization of LEO"[cite: 88]. Led team <em>Astrosweepers</em> as <strong>Finance Head</strong>, preparing complex strategic projections and forecasts[cite: 88].</p>
                 </div>
                 <div class="card">
-                    <h3>Academic Mentorship</h3>
-                    <p>As a Part-Time Professor at Adhyapana Academy, I delivered lectures on Financial Accounting and Strategic Management. My curriculum-based approach achieved a <strong>94% student success rate</strong>.</p>
+                    <h3>Strategic Mentorship</h3>
+                    <p>Achieved a <strong>94% success rate</strong> as a Part-Time Professor at Adhyapana Academy[cite: 48]. Delivered high-impact lectures on Financial Accounting and Strategic Management[cite: 48].</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="speaker" style="background: var(--bg-slate);">
-        <div class="container">
-            <h2 class="section-title">Guest Speaker & Professional Engagements</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Karpagam Academy</h3>
-                    <p>Invited as a <strong>Guest Speaker</strong> to deliver a session on "Awareness on Chartered Accountancy program," providing guidance to aspiring finance professionals.</p>
-                </div>
-                <div class="card">
-                    <h3>Easwari Engineering College</h3>
-                    <p>Featured in an <strong>Expert Talk</strong> titled "Profit by Design: Crafting resilient Investment Portfolios," sharing insights on investment strategy and wealth management.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience">
+    <section id="experience" style="background: var(--bg-slate);">
         <div class="container">
             <h2 class="section-title">Professional Journey</h2>
             <div class="timeline">
@@ -131,16 +124,16 @@
                     <div class="timeline-content">
                         <span class="date">Dec 2025 - Present</span>
                         <h4>Senior FP&A Analyst</h4>
-                        <span class="company">Lennox India Technology Centre </span>
-                        <p>Analyzing SG&A spend and providing management insights for global operations.</p>
+                        <span class="company">Lennox India Technology Centre</span>
+                        <p>Analyzing SG&A spend and revenue impact through daily sales reviews and management dashboards[cite: 12, 13].</p>
                     </div>
                 </div>
                 <div class="timeline-item left">
                     <div class="timeline-content">
                         <span class="date">Feb 2025 - Oct 2025</span>
-                        <h4>Equity research Analyst</h4>
-                        <span class="company">KYNG Capital Management </span>
-                        <p>Managed INR 150Crs AUM with a 14.7% return as of August 2025.</p>
+                        <h4>Research Analyst & Trade Dealer</h4>
+                        <span class="company">KYNG Capital Management</span>
+                        <p>Directly assisted the Fund Manager in analyzing investment opportunities for an <strong>INR 150Cr AUM</strong>, yielding a 14.7% return[cite: 18, 20].</p>
                     </div>
                 </div>
                 <div class="timeline-item right">
@@ -148,33 +141,58 @@
                         <span class="date">Sep 2022 - Mar 2024</span>
                         <h4>CA Industrial Trainee</h4>
                         <span class="company">J.P. Morgan Chase & Co.</span>
-                        <p>Financial reporting for Investment Funds with capital contributions of EUR 100-150Crs.</p>
+                        <p>Managed financial statements and GAV/NAV calculations for 3 Investment Funds with capital contributions of <strong>EUR 100-150Crs</strong>[cite: 25, 27].</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="date">Mar 2021 - Sep 2022</span>
+                        <h4>Articled Assistant</h4>
+                        <span class="company">IPRS and Company, Chartered Accountants</span>
+                        <p>Prepared financial statements for entities with turnovers up to <strong>INR 115Crs</strong> and led financial projections for medical equipment funding[cite: 32, 35, 37].</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" style="background: var(--bg-slate);">
+    <section id="skills">
         <div class="container">
             <h2 class="section-title">Technical Proficiency</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>Core Financial Skills</h3>
+                    <h3>Financial Expertise</h3>
                     <ul>
-                        <li>Financial Reporting & Budgeting </li>
-                        <li>Variance Analysis </li>
-                        <li>GAV/NAV Preparation </li>
-                        <li>Regulatory Compliance & Tax Filings </li>
+                        <li>Advanced Financial Reporting & Budgeting [cite: 90]</li>
+                        <li>Variance Analysis & Strategic Forecasting [cite: 38, 90]</li>
+                        <li>GAV/NAV & Waterfall Calculations [cite: 27, 91]</li>
+                        <li>Statutory & Tax Audits [cite: 40, 54, 92]</li>
                     </ul>
                 </div>
                 <div class="card">
                     <h3>Technical Stack</h3>
                     <ul>
-                        <li>Advanced MS Excel </li>
-                        <li>SAP & Power BI </li>
-                        <li>Investran & Tally ERP </li>
+                        <li>Advanced MS Excel & Power BI [cite: 91]</li>
+                        <li>Investran (Private Equity Accounting) [cite: 91]</li>
+                        <li>SAP & Tally ERP [cite: 91]</li>
+                        <li>Financial Modeling & Dashboarding [cite: 12, 90]</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="personal" style="background: var(--bg-slate);">
+        <div class="container">
+            <h2 class="section-title">Engagements & Interests</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Guest Speaking</h3>
+                    <p>Invited speaker at <strong>Karpagam Academy</strong> and <strong>Easwari Engineering College</strong> on topics ranging from CA awareness to resilient investment portfolios[cite: 86, 87].</p>
+                </div>
+                <div class="card">
+                    <h3>Beyond the Numbers</h3>
+                    <p>Outside of finance, I am an active performer in <strong>competitive dance</strong>, bringing the same discipline and energy to the stage as I do to financial strategy.</p>
                 </div>
             </div>
         </div>
@@ -182,15 +200,14 @@
 
     <footer>
         <div class="container">
-            <p>Chennai, Tamil Nadu | +91-93420 59821 | pragathy.s23@gmail.com </p>
-            <div style="margin-top: 15px;">
-                <a href="https://www.linkedin.com/in/pragathy-s" class="social-link">LinkedIn</a>
+            <p> +91-93420 59821 | pragathy.s23@gmail.com [cite: 2]</p>
+            <div style="margin-top: 20px;">
+                <a href="https://www.linkedin.com/in/pragathy-s" target="_blank" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">Download Full Resume</a>
             </div>
+            <p style="margin-top: 30px; font-size: 0.8rem; opacity: 0.6;">&copy; 2026 Pragathy S. Built with Passion & Precision.</p>
         </div>
     </footer>
-
-    <script src="https://cdn.botpress.cloud/webchat/v2.2/shareable.html"></script>
-    <script src="https://files.bpcontent.cloud/XXXXX/default/index.js"></script>
 
 </body>
 </html>
