@@ -47,6 +47,7 @@
             border: 4px solid var(--white);
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
             flex-shrink: 0;
+            background-color: #e2e8f0; /* Fallback background color */
         }
         .hero-text { flex: 1; }
         .hero h1 { font-size: 3rem; margin-bottom: 10px; }
@@ -112,8 +113,8 @@
     <header>
         <div class="container hero">
             <div class="hero-container">
-                <!-- Profile Image Element pointing to Photo.jpg -->
-                <img src="Photo.jpg" alt="Pragathy S" class="profile-photo">
+                <!-- Replace PASTE_YOUR_BASE64_STRING_HERE with your converted image code -->
+                <img src="PASTE_YOUR_BASE64_STRING_HERE" alt="Pragathy S" class="profile-photo" onerror="this.src='Photo.jpg';">
                 <div class="hero-text">
                     <h1>Pragathy S</h1>[cite: 1, 2]
                     <p>Senior FP&A Analyst | CA & CMA | NASA Space App Challenge Winner'25</p>[cite: 1, 2]
